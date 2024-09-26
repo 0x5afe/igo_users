@@ -1,0 +1,1 @@
+CREATE TABLE users (id int NOT NULL AUTO_INCREMENT, email varchar(255) NOT NULL, password varchar(255), first_name varchar(255), last_name varchar(255), created_at date, PRIMARY KEY (id))

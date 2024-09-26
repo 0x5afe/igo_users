@@ -1,0 +1,23 @@
+{> "layouts/main" /}
+
+{<content} <h1>Users list</h1>
+
+    <table>
+        <thead>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Created at</th>
+        </thead>
+
+        <tbody>
+            {#users}
+                <tr>
+                    <td>{.}</td>
+                    <td>{.}</td>
+                    <td>{.}</td>
+                </tr>
+            {/users}
+        </tbody>
+    </table>
+
+    {/content}
