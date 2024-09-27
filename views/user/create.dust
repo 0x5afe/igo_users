@@ -1,20 +1,54 @@
 {> "layouts/main" /}
 
-{<content} <form action="/" method="post">
+{<content} <div class="container">
 
-    <label for="">email</label>
-    <input placeholder="user's email" type="email" name="email" value="test@test.com" />
+    <h3>Create user</h3>
 
-    <label for="">password</label>
-    <input placeholder="user's password" type="password" name="password" value="test@test.com" />
+    <form action="/" method="post">
 
-    <label for="">first name</label>
-    <input placeholder="user's first name" type="text" name="first_name" value="andry" />
+        <div class="row">
+            <div class="col-6">
+                <label class="form-label" for="">email</label>
+                <input class="form-control" placeholder="user's email" type="text" name="email" />
+            </div>
+        </div>
 
-    <label for="">last name</label>
-    <input placeholder="user's last name" type="text" name="last_name" value="ralaivao" />
+        <div class="row">
+            <div class="col-6">
+                <label for="">password</label>
+                <input class="form-control" placeholder="user's password" type="password" name="password" />
+            </div>
+        </div>
 
-    <button type="submit">Create user</button>
+
+        <div class="row">
+            <div class="col-6">
+                <label for="">first name</label>
+                <input class="form-control" placeholder="user's first name" type="text" name="first_name" />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <label for="">last name</label>
+                <input class="form-control" placeholder="user's last name" type="text" name="last_name" />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-success" type="submit">
+                    <i class="fa fa-save"></i>
+                    Create user
+                </button>
+            </div>
+        </div>
+
     </form>
+
+
+    </div>
 
     {/content}

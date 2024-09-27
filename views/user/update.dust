@@ -1,20 +1,58 @@
 {> "layouts/main" /}
 
-{<content} <form action="/" method="post">
+{<content} <div class="container">
 
-    <label for="">email</label>
-    <input placeholder="user's email" type="email" name="email" />
+    <h3>Update user</h3>
 
-    <label for="">password</label>
-    <input placeholder="user's password" type="password" name="password" />
+    <form action="/update" method="post">
 
-    <label for="">first name</label>
-    <input placeholder="user's first name" type="text" name="first_name" />
+        <input type="hidden" name="id" value="{user.id}" />
 
-    <label for="">last name</label>
-    <input placeholder="user's last name" type="text" name="last_name" />
+        <div class="row">
+            <div class="col-6">
+                <label class="form-label" for="">email</label>
+                <input class="form-control" placeholder="user's email" type="text" name="email" value="{user.email}" />
+            </div>
+        </div>
 
-    <button type="submit">Create user</button>
+        <div class="row">
+            <div class="col-6">
+                <label for="">password</label>
+                <input class="form-control" placeholder="user's password" type="password" name="password"
+                    value="{user.password}" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <label for="">first name</label>
+                <input class="form-control" placeholder="user's first name" type="text" name="first_name"
+                    value="{user.first_name}" />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <label for="">last name</label>
+                <input class="form-control" placeholder="user's last name" type="text" name="last_name"
+                    value="{user.last_name}" />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-success" type="submit">
+                    <i class="fa fa-save"></i>
+                    Update user
+                </button>
+            </div>
+        </div>
+
     </form>
+
+
+    </div>
 
     {/content}

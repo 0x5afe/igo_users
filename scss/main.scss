@@ -1,9 +1,9 @@
-
-
-@import './welcome.scss';
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+i.fa, button.btn{
+  margin-right: .5rem;
 }

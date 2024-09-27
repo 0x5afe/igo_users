@@ -1,23 +1,39 @@
 {> "layouts/main" /}
 
-{<content} <h1>Users list</h1>
 
-    <table>
+{<content} <div class="container">
+
+    <h3>Users list</h3>
+
+    <table class="table table-striped">
         <thead>
             <th>Email</th>
             <th>Name</th>
             <th>Created at</th>
+            <th>Actions</th>
         </thead>
 
         <tbody>
             {#users}
-                <tr>
-                    <td>{.}</td>
-                    <td>{.}</td>
-                    <td>{.}</td>
-                </tr>
+            <tr>
+                <td>{.email}</td>
+                <td>{.first_name} {.last_name}</td>
+                <td>{.created_at}</td>
+                <td>
+                    <button onclick="confirmDelete('{.id}', '{.email}')" class="btn btn-danger">
+                        <i class="fa fa-times"></i>
+                        Delete
+                    </button>
+                    <a href="/update/{.id}" class="btn btn-warning">
+                        <i class="fa fa-edit"></i>
+                        Update
+                    </a>
+                </td>
+            </tr>
             {/users}
         </tbody>
     </table>
 
+
+    </div>
     {/content}
